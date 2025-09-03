@@ -1,41 +1,41 @@
 ---
 name: plan
-description: "Plan how to implement the specified feature. This is the second step in the Spec-Driven Development lifecycle."
+description: "指定された機能を実装する方法を計画します。これは仕様駆動開発ライフサイクルの2番目のステップです。"
 ---
 
-Plan how to implement the specified feature.
+指定された機能を実装する方法を計画します。
 
-This is the second step in the Spec-Driven Development lifecycle.
+これは仕様駆動開発ライフサイクルの2番目のステップです。
 
-Given the implementation details provided as an argument, do this:
+引数として提供された実装の詳細を基に、以下を実行します:
 
-1. Run `scripts/setup-plan.sh --json` from the repo root and parse JSON for FEATURE_SPEC, IMPL_PLAN, SPECS_DIR, BRANCH. All future file paths must be absolute.
-2. Read and analyze the feature specification to understand:
-   - The feature requirements and user stories
-   - Functional and non-functional requirements
-   - Success criteria and acceptance criteria
-   - Any technical constraints or dependencies mentioned
+1. リポジトリルートから `scripts/setup-plan.sh --json` を実行し、FEATURE_SPEC、IMPL_PLAN、SPECS_DIR、BRANCHのJSONを解析します。今後のすべてのファイルパスは絶対パスでなければなりません。
+2. 機能仕様を読んで分析し、以下を理解します:
+   - 機能要件とユーザーストーリー
+   - 機能要件と非機能要件
+   - 成功基準と受け入れ基準
+   - 言及された技術的制約や依存関係
 
-3. Read the constitution at `/memory/constitution.md` to understand constitutional requirements.
+3. 憲法要件を理解するために `/memory/constitution.md` の憲法を読みます。
 
-4. Execute the implementation plan template:
-   - Load `/templates/implementation-plan-template.md` (already copied to IMPL_PLAN path)
-   - Set Input path to FEATURE_SPEC
-   - Run the Execution Flow (main) function steps 1-10
-   - The template is self-contained and executable
-   - Follow error handling and gate checks as specified
-   - Let the template guide artifact generation in $SPECS_DIR:
-     * Phase 0 generates research.md
-     * Phase 1 generates data-model.md, contracts/, quickstart.md
-     * Phase 2 generates tasks.md
-   - Incorporate user-provided details from arguments into Technical Context: {ARGS}
-   - Update Progress Tracking as you complete each phase
+4. 実装計画テンプレートを実行します:
+   - `/templates/implementation-plan-template.md` を読み込む（すでにIMPL_PLANパスにコピーされています）
+   - 入力パスをFEATURE_SPECに設定
+   - 実行フロー（main）関数のステップ1-10を実行
+   - テンプレートは自己完結型で実行可能
+   - 指定されたエラー処理とゲートチェックに従う
+   - テンプレートに$SPECS_DIRでアーティファクト生成をガイドさせる:
+     * フェーズ0はresearch.mdを生成
+     * フェーズ1はdata-model.md、contracts/、quickstart.mdを生成
+     * フェーズ2はtasks.mdを生成
+   - 引数からユーザー提供の詳細を技術コンテキストに組み込む: {ARGS}
+   - 各フェーズを完了するたびに進捗追跡を更新
 
-5. Verify execution completed:
-   - Check Progress Tracking shows all phases complete
-   - Ensure all required artifacts were generated
-   - Confirm no ERROR states in execution
+5. 実行が完了したことを確認:
+   - 進捗追跡がすべてのフェーズ完了を表示しているか確認
+   - すべての必要なアーティファクトが生成されたことを確認
+   - 実行にエラー状態がないことを確認
 
-6. Report results with branch name, file paths, and generated artifacts.
+6. ブランチ名、ファイルパス、生成されたアーティファクトと結果を報告します。
 
-Use absolute paths with the repository root for all file operations to avoid path issues.
+パスの問題を避けるため、すべてのファイル操作でリポジトリルートを使用した絶対パスを使用します。

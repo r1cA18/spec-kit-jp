@@ -1,17 +1,17 @@
 ---
 name: specify
-description: "Start a new feature by creating a specification and feature branch. This is the first step in the Spec-Driven Development lifecycle."
+description: "仕様書と機能ブランチを作成して新機能を開始します。これは仕様駆動開発ライフサイクルの最初のステップです。"
 ---
 
-Start a new feature by creating a specification and feature branch.
+仕様書と機能ブランチを作成して新機能を開始します。
 
-This is the first step in the Spec-Driven Development lifecycle.
+これは仕様駆動開発ライフサイクルの最初のステップです。
 
-Given the feature description provided as an argument, do this:
+引数として提供された機能の説明を基に、以下を実行します:
 
-1. Run the script `scripts/create-new-feature.sh --json "{ARGS}"` from repo root and parse its JSON output for BRANCH_NAME and SPEC_FILE. All file paths must be absolute.
-2. Load `templates/spec-template.md` to understand required sections.
-3. Write the specification to SPEC_FILE using the template structure, replacing placeholders with concrete details derived from the feature description (arguments) while preserving section order and headings.
-4. Report completion with branch name, spec file path, and readiness for the next phase.
+1. リポジトリルートから `scripts/create-new-feature.sh --json "{ARGS}"` スクリプトを実行し、BRANCH_NAMEとSPEC_FILEのJSON出力を解析します。すべてのファイルパスは絶対パスでなければなりません。
+2. 必要なセクションを理解するために `templates/spec-template.md` を読み込みます。
+3. テンプレート構造を使用して仕様をSPEC_FILEに書き込み、プレースホルダーを機能の説明（引数）から導出した具体的な詳細に置き換えながら、セクションの順序と見出しを保持します。
+4. ブランチ名、仕様ファイルパス、および次のフェーズへの準備完了を報告します。
 
-Note: The script creates and checks out the new branch and initializes the spec file before writing.
+注意: スクリプトは新しいブランチを作成してチェックアウトし、書き込み前に仕様ファイルを初期化します。
