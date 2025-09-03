@@ -228,9 +228,3 @@ RUN uv tool install git+https://github.com/r1cA18/spec-kit-jp.git
 
 - オリジナル: Den Delimarsky ([@localden](https://github.com/localden)), John Lam ([@jflam](https://github.com/jflam))
 - 日本語版: [@r1cA18](https://github.com/r1cA18)
-
----
-
-<p align="center">
-  <strong>🌸 日本のチームのために、日本語で仕様駆動開発を 🌸</strong>
-</p>
